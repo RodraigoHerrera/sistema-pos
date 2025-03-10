@@ -1,4 +1,6 @@
 import Image from "next/image";
+import {holtwoodOneSC} from './ui/fonts'
+
 
 export default function Home() {
   return (
@@ -15,11 +17,13 @@ export default function Home() {
 
       {/* Contenedor del formulario */}
       <div className="relative bg-[#0C0C0F] bg-opacity-90 p-6 rounded shadow w-full max-w-lg">
-        <h1 className="text-[#FF1E00] text-2xl font-bold text-center mb-4">SISTEMA POS</h1>
+        <h1 className={`${holtwoodOneSC.className} antialiased text-[#FF1E00] text-2xl font-bold text-center mb-4`}>
+          SISTEMA POS
+          </h1>
         <form className="space-y-4">
           {/* Campo de usuario */}
           <div>
-            <label htmlFor="email" className="block mb-1 font-medium">
+            <label htmlFor="email" className="text-white block mb-1 font-medium">
               Usuario
             </label>
             <input
@@ -31,7 +35,7 @@ export default function Home() {
           </div>
           {/* Campo de contraseña */}
           <div>
-            <label htmlFor="password" className="block mb-1 font-medium">
+            <label htmlFor="password" className="text-white block mb-1 font-medium">
               Contraseña
             </label>
             <input

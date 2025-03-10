@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Holtwood_One_SC, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import {jetBrains_Mono, holtwoodOneSC} from './ui/fonts'
 
-// Holtwood One SC solo tiene un peso: 400
-const holtwoodOneSC = Holtwood_One_SC({
-  weight: "400",
-  variable: "--font-holtwood-one-sc",
-  subsets: ["latin"],
-});
 
-// JetBrains Mono tiene varios pesos, pero necesitas especificarlos si deseas más de uno.
-// Por ejemplo, si quieres usar 400 y 700, quedaría así:
-const jetbrainsMono = JetBrains_Mono({
-  weight: ["400", "700"],
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Inicio de Sesión",
@@ -26,7 +13,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 {
   return (
     <html lang="es">
-      <body className={`${holtwoodOneSC.variable} ${jetbrainsMono.variable} antialiased`}>
+      <body className={`${jetBrains_Mono.className} antialiased`}>
 
         {children}
 
